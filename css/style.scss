@@ -1,0 +1,75 @@
+#box {
+  width: 20%;
+  height: 0;
+  padding-top: 20%;
+  position: relative;
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.traffic-lights {
+  &--red {
+    animation: color-red 6s infinite;
+  }
+  &--yellow {
+    animation: color-yellow 6s infinite;
+  }
+  &--green {
+    animation: color-green 6s infinite;
+  }
+}
+@keyframes color-red {
+  0% {   fill: #420000; }
+  5% {   fill: #F70000; }
+  40% {  fill: #F70000; }
+  45% {  fill: #420000; }
+  100% { fill: #420000; }
+}
+@keyframes color-yellow {
+  0% {    fill:#2F2C00; }
+  40% {   fill: #2F2C00; }
+  45% {   fill: #F7EB00; }
+  55% {   fill: #F7EB00; }
+  60% {   fill: #2F2C00; }
+  90% {   fill: #2F2C00; }
+  95% {   fill: #F7EB00; }
+  100% {  fill: #F7EB00; }
+}
+@keyframes color-green {
+  0% {   fill:#001800;  }
+  55% {  fill: #001800; }
+  60% {  fill: #009F00; }
+  90% {   fill: #009F00; }
+  95% {   fill: #001800; }
+  100% { fill: #001800; }
+}
+
+.c1 {
+  -webkit-animation-name: scaleme;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+
+  animation-name: scaleme;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes scaleme {
+  0% { transform: scale(1) translate(0,0); }
+  100% { transform: scale(1.1) translate(5px,0); }
+}
+
+@keyframes scaleme {
+  0% { transform: scale(1) translate(0,0); }
+  100% { transform: scale(1.1) translate(5px,0); }
+}
+
+.form-group{
+  max-width: 500px;
+}
